@@ -10,4 +10,20 @@ int sumOfSeries(int n) {
         return (n*n*n) + sumOfSeries(n-1);
     }
 
-//Q6. 
+//Q6. Factorials Less than or Equal to n
+
+int sum = 0;
+    vector<long long> factorialNumbers(long long n) {
+        // Write Your Code here
+        vector<long long> result;
+        long long fact = 1;
+        int i = 1;
+        
+        while(fact<=n){
+            result.push_back(fact);
+            i++;
+            fact *= i;
+        }
+        
+        return result;
+    }
