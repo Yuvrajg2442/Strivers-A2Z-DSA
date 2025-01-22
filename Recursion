@@ -1,0 +1,13 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+//Q5. Sum of first n terms
+//Given an integer n, calculate the sum of series 13 + 23 + 33 + 43 + … till n-th term.
+
+int sumOfSeries(int n) {
+        // code here
+        if(n==0) return 0;
+        return (n*n*n) + sumOfSeries(n-1);
+    }
+
+//Q6. 
