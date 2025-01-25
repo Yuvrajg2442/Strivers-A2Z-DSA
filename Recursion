@@ -38,3 +38,25 @@ void reverseArray(vector<int> &arr, int i = 0) {
     reverseArray(arr, i+1);
     }
 
+//q8. bool isPalindrome(string s, int i = 0) {
+            string filtered;
+
+        for (char c : s) {
+            if (isalnum(c)) {
+                filtered += tolower(c);
+            }
+        }
+
+        int n = filtered.size();
+        // Base case: if we reach the middle, it's a palindrome
+        if (i >= n / 2) return true;
+
+        // If characters at current positions don't match, return false
+        if (filtered[i] != filtered[n - i - 1]) return false;
+
+        // Recursive call to check the next pair of characters
+        return isPalindrome(filtered, i + 1);
+    }
+
+//q9. fibonacci
+
