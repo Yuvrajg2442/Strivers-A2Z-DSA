@@ -60,3 +60,12 @@ void reverseArray(vector<int> &arr, int i = 0) {
 
 //q9. fibonacci
 
+int fib(int n) {
+        if(n<=1){
+            return n;
+        }
+        
+        int last = fib(n-1);
+        int slast = fib(n-2);
+        return last + slast;
+    }
